@@ -1,0 +1,9 @@
+name: Pi4j
+description: Pi4j - all things Java on Raspberry Pi
+metadata:
+  keywords:
+    - pi4j
+  guide: https://www.pi4j.com/getting-started/ # To create and publish this guide, see https://github.com/quarkiverse/quarkiverse/wiki#documenting-your-extension
+  categories:
+    - "miscellaneous"
+  status: "preview"

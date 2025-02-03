@@ -1,0 +1,5 @@
+name: quarkus-pi4j
+title: Pi4j
+version: dev
+nav:
+  - modules/ROOT/nav.adoc
