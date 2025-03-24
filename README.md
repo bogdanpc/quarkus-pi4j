@@ -28,7 +28,7 @@ The extension handles the lifecycle management and ensures proper initialization
 ```shell
 git clone https://github.com/bogdanpc/quarkus-pi4j
 cd quarkus-pi4j
-./mvnw package install
+./mvnw package
 ```
 
 ## Usage
@@ -43,7 +43,7 @@ Add the following dependency to your `pom.xml`
 <dependency>
     <groupId>io.github.bogdanpc</groupId>
     <artifactId>quarkus-pi4j</artifactId>
-    <version>0.1.0</version>
+    <version>0.2.0</version>
 </dependency>
 ```
 

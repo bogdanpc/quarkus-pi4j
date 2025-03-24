@@ -5,11 +5,11 @@
     <parent>
         <groupId>io.quarkiverse</groupId>
         <artifactId>quarkiverse-parent</artifactId>
-        <version>18</version>
+        <version>19</version>
     </parent>
     <groupId>com.github.bogdanpc</groupId>
     <artifactId>quarkus-pi4j-parent</artifactId>
-    <version>0.1.0</version>
+    <version>0.2.0</version>
     <packaging>pom</packaging>
     <name>Quarkus Pi4j - Parent</name>
 
@@ -30,8 +30,8 @@
         <maven.compiler.release>21</maven.compiler.release>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <quarkus.version>3.19.1</quarkus.version>
-        <pi4j.version>2.8.0</pi4j.version>
+        <quarkus.version>3.19.4</quarkus.version>
+        <pi4j.version>3.0.1</pi4j.version>
     </properties>
 
     <dependencyManagement>
