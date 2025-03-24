@@ -6,7 +6,7 @@
     <parent>
         <groupId>com.github.bogdanpc</groupId>
         <artifactId>quarkus-pi4j-parent</artifactId>
-        <version>0.1.0</version>
+        <version>0.2.0</version>
     </parent>
     <artifactId>quarkus-pi4j-deployment</artifactId>
     <name>Quarkus Pi4j - Deployment</name>
