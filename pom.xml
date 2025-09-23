@@ -9,7 +9,7 @@
     </parent>
     <groupId>com.github.bogdanpc</groupId>
     <artifactId>quarkus-pi4j-parent</artifactId>
-    <version>0.2.0</version>
+    <version>0.2.1</version>
     <packaging>pom</packaging>
     <name>Quarkus Pi4j - Parent</name>
 
@@ -30,8 +30,8 @@
         <maven.compiler.release>21</maven.compiler.release>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <quarkus.version>3.25.0</quarkus.version>
-        <pi4j.version>3.0.2</pi4j.version>
+        <quarkus.version>3.26.4</quarkus.version>
+        <pi4j.version>3.0.3</pi4j.version>
     </properties>
 
     <dependencyManagement>

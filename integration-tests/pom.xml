@@ -5,7 +5,7 @@
     <parent>
         <groupId>com.github.bogdanpc</groupId>
         <artifactId>quarkus-pi4j-parent</artifactId>
-        <version>0.2.0</version>
+        <version>0.2.1</version>
     </parent>
     <artifactId>quarkus-pi4j-integration-tests</artifactId>
     <name>Quarkus Pi4j - Integration Tests</name>
@@ -26,7 +26,7 @@
         <dependency>
             <groupId>com.github.bogdanpc</groupId>
             <artifactId>quarkus-pi4j</artifactId>
-            <version>0.2.0</version>
+            <version>0.2.1</version>
         </dependency>
         <dependency>
             <groupId>io.quarkus</groupId>
@@ -55,7 +55,7 @@
             </plugin>
             <plugin>
                 <artifactId>maven-failsafe-plugin</artifactId>
-                <version>3.5.3</version>
+                <version>3.5.4</version>
                 <executions>
                     <execution>
                         <goals>
