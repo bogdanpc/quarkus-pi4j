@@ -33,7 +33,6 @@ cd quarkus-pi4j
 
 ## Usage
 
-
 If Java is not installed yet, use [SDKMAN](https://sdkman.io/install/)
 
 Add the following dependency to your `pom.xml`
@@ -43,7 +42,7 @@ Add the following dependency to your `pom.xml`
 <dependency>
     <groupId>io.github.bogdanpc</groupId>
     <artifactId>quarkus-pi4j</artifactId>
-    <version>0.2.1</version>
+    <version>0.2.2</version>
 </dependency>
 ```
 
@@ -57,24 +56,19 @@ import com.pi4j.io.exception.IOException;
 import com.pi4j.io.gpio.digital.DigitalState;
 import io.quarkus.logging.Log;
 
-import io.quarkus.logging.Log;
 import jakarta.enterprise.context.ApplicationScoped;
 
 @ApplicationScoped
-public class LEDResource {
+class LEDResource {
     @Inject
     Context pi4j; // Automatically configured and injected by the Quarkus extension
 
-    private static final int PIN_LED = 22;
+    private final int PIN_LED = 22;
 
-    public void turnOnLED() {
-        try {
-            var led = pi4j.digitalOutput().create(PIN_LED);
+    void turnOnLED() throws IOException{
+        var led = pi4j.digitalOutput().create(PIN_LED);
 
-            led.state(DigitalState.HIGH);
-        } catch (IOException e) {
-            Log.errorf("Error: %s", e.getMessage());
-        }
+        led.state(DigitalState.HIGH);
     }
 }
 ```
@@ -97,15 +91,17 @@ quarkus.pi4j.health.enabled=true
 If Java is not installed yet, use [SDKMAN](https://sdkman.io/install/)
 
 First you need to clone and install to local Maven repository
+
 ```shell
 git clone https://github.com/bogdanpc/quarkus-pi4j
 cd quarkus-pi4j
 ./mvnw package install
 ```
 
-Then go to `examples/simpe-app` directory
+Then go to `examples/simple-app` directory
 
 Start application in Quarkus dev mode using
+
 ```shell
 ./mvnw quarkus:dev
 ```
@@ -178,3 +174,27 @@ You can toggle on/off the LED using REST endpoints
 ON `curl -v -X PUT http://0.0.0.0:8080/api/pi4j/led/true`
 
 OFF `curl -v -X PUT http://0.0.0.0:8080/api/pi4j/led/false`
+
+### Development Setup
+
+```shell
+# Clone the repository
+git clone https://github.com/bogdanpc/quarkus-pi4j
+cd quarkus-pi4j
+
+# Build the project
+./mvnw clean package
+
+# Run tests
+./mvnw test
+
+# Run integration tests
+./mvnw verify -Pit
+
+# Install to local Maven repository
+./mvnw clean install
+```
+
+## License
+
+This project is licensed under the [Apache License 2.0](LICENSE).

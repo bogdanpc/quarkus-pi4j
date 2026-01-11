@@ -2,6 +2,7 @@ package com.github.bogdanpc.quarkus.pi4j.it;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.is;
+import static org.hamcrest.Matchers.notNullValue;
 
 import org.junit.jupiter.api.Test;
 
@@ -27,6 +28,8 @@ public class Pi4jResourceTest {
                 .statusCode(200)
                 .body("status", is("UP"))
                 .body("checks[0].name", is("Pi4J health check"))
-                .body("checks[0].status", is("UP"));
+                .body("checks[0].status", is("UP"))
+                .body("checks[0].data.'board.name'", notNullValue())
+                .body("checks[0].data.'java.version'", notNullValue());
     }
 }

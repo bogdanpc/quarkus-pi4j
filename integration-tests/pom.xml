@@ -5,13 +5,15 @@
     <parent>
         <groupId>com.github.bogdanpc</groupId>
         <artifactId>quarkus-pi4j-parent</artifactId>
-        <version>0.2.1</version>
+        <version>0.2.2</version>
     </parent>
     <artifactId>quarkus-pi4j-integration-tests</artifactId>
     <name>Quarkus Pi4j - Integration Tests</name>
 
     <properties>
         <skipITs>true</skipITs>
+        <!-- Required for Java 24+ module access -->
+        <argLine>--add-opens java.base/java.lang=ALL-UNNAMED</argLine>
     </properties>
 
     <dependencies>
@@ -26,7 +28,7 @@
         <dependency>
             <groupId>com.github.bogdanpc</groupId>
             <artifactId>quarkus-pi4j</artifactId>
-            <version>0.2.1</version>
+            <version>0.2.2</version>
         </dependency>
         <dependency>
             <groupId>io.quarkus</groupId>
@@ -74,29 +76,4 @@
             </plugin>
         </plugins>
     </build>
-
-    <profiles>
-        <profile>
-            <id>native-image</id>
-            <activation>
-                <property>
-                    <name>native</name>
-                </property>
-            </activation>
-            <build>
-                <plugins>
-                    <plugin>
-                        <artifactId>maven-surefire-plugin</artifactId>
-                        <configuration>
-                            <skipTests>${native.surefire.skip}</skipTests>
-                        </configuration>
-                    </plugin>
-                </plugins>
-            </build>
-            <properties>
-                <skipITs>false</skipITs>
-                <quarkus.native.enabled>true</quarkus.native.enabled>
-            </properties>
-        </profile>
-    </profiles>
 </project>

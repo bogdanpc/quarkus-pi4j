@@ -1,9 +1,17 @@
-name: Pi4j
-description: Pi4j - all things Java on Raspberry Pi
+name: Pi4J
+description: Pi4J - GPIO programming for Raspberry Pi in Quarkus
 metadata:
   keywords:
     - pi4j
-  guide: https://www.pi4j.com/getting-started/ # To create and publish this guide, see https://github.com/quarkiverse/quarkiverse/wiki#documenting-your-extension
+    - raspberry-pi
+    - gpio
+    - iot
+  guide: https://www.pi4j.com/getting-started/
   categories:
-    - "miscellaneous"
+    - "integration"
   status: "preview"
+  config:
+    - "quarkus.pi4j."
+  capabilities:
+    provides:
+      - io.quarkiverse.pi4j
