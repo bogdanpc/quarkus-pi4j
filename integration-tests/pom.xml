@@ -5,15 +5,16 @@
     <parent>
         <groupId>com.github.bogdanpc</groupId>
         <artifactId>quarkus-pi4j-parent</artifactId>
-        <version>0.2.2</version>
+        <version>0.2.3</version>
     </parent>
     <artifactId>quarkus-pi4j-integration-tests</artifactId>
     <name>Quarkus Pi4j - Integration Tests</name>
+    <packaging>quarkus</packaging>
 
     <properties>
         <skipITs>true</skipITs>
         <!-- Required for Java 24+ module access -->
-        <argLine>--add-opens java.base/java.lang=ALL-UNNAMED</argLine>
+        <argLine>@{argLine} --add-opens java.base/java.lang=ALL-UNNAMED</argLine>
     </properties>
 
     <dependencies>
@@ -28,11 +29,11 @@
         <dependency>
             <groupId>com.github.bogdanpc</groupId>
             <artifactId>quarkus-pi4j</artifactId>
-            <version>0.2.2</version>
+            <version>0.2.3</version>
         </dependency>
         <dependency>
             <groupId>io.quarkus</groupId>
-            <artifactId>quarkus-junit5</artifactId>
+            <artifactId>quarkus-junit</artifactId>
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -47,13 +48,6 @@
             <plugin>
                 <groupId>io.quarkus</groupId>
                 <artifactId>quarkus-maven-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>build</goal>
-                        </goals>
-                    </execution>
-                </executions>
             </plugin>
             <plugin>
                 <artifactId>maven-failsafe-plugin</artifactId>

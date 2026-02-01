@@ -9,7 +9,7 @@
     </parent>
     <groupId>com.github.bogdanpc</groupId>
     <artifactId>quarkus-pi4j-parent</artifactId>
-    <version>0.2.2</version>
+    <version>0.2.3</version>
     <packaging>pom</packaging>
     <name>Quarkus Pi4j - Parent</name>
 
@@ -27,12 +27,11 @@
 
     <properties>
         <compiler-plugin.version>3.14.1</compiler-plugin.version>
-        <maven.compiler.release>21</maven.compiler.release>
+        <maven.compiler.release>25</maven.compiler.release>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <quarkus.version>3.30.6</quarkus.version>
+        <quarkus.version>3.31.1</quarkus.version>
         <pi4j.version>3.0.3</pi4j.version>
-        <argLine>--add-opens java.base/java.lang=ALL-UNNAMED</argLine>
     </properties>
 
     <dependencyManagement>
@@ -54,6 +53,7 @@
                     <groupId>io.quarkus</groupId>
                     <artifactId>quarkus-maven-plugin</artifactId>
                     <version>${quarkus.version}</version>
+                    <extensions>true</extensions>
                 </plugin>
                 <plugin>
                     <artifactId>maven-compiler-plugin</artifactId>
@@ -65,6 +65,11 @@
                     <groupId>io.quarkus</groupId>
                     <artifactId>quarkus-config-doc-maven-plugin</artifactId>
                     <version>${quarkus.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>net.revelc.code</groupId>
+                    <artifactId>impsort-maven-plugin</artifactId>
+                    <version>1.13.0</version>
                 </plugin>
             </plugins>
         </pluginManagement>

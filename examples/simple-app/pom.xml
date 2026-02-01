@@ -5,13 +5,14 @@
     <artifactId>quarkus-pi4j-examples-simple-app</artifactId>
     <name>Quarkus Pi4J - Examples - Simple application</name>
     <version>1.0.0</version>
+    <packaging>quarkus</packaging>
 
     <properties>
         <compiler-plugin.version>3.14.1</compiler-plugin.version>
-        <maven.compiler.release>21</maven.compiler.release>
+        <maven.compiler.release>25</maven.compiler.release>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <quarkus.version>3.30.6</quarkus.version>
+        <quarkus.version>3.31.1</quarkus.version>
     </properties>
 
     <dependencyManagement>
@@ -37,7 +38,7 @@
         <dependency>
             <groupId>com.github.bogdanpc</groupId>
             <artifactId>quarkus-pi4j</artifactId>
-            <version>0.2.2</version>
+            <version>0.2.3</version>
         </dependency>
     </dependencies>
 
@@ -47,13 +48,7 @@
                 <groupId>io.quarkus</groupId>
                 <artifactId>quarkus-maven-plugin</artifactId>
                 <version>${quarkus.version}</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>build</goal>
-                        </goals>
-                    </execution>
-                </executions>
+                <extensions>true</extensions>
             </plugin>
             <plugin>
                 <artifactId>maven-failsafe-plugin</artifactId>
