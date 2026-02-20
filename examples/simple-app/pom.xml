@@ -12,7 +12,7 @@
         <maven.compiler.release>25</maven.compiler.release>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <quarkus.version>3.31.1</quarkus.version>
+        <quarkus.version>3.31.4</quarkus.version>
     </properties>
 
     <dependencyManagement>
@@ -38,7 +38,7 @@
         <dependency>
             <groupId>com.github.bogdanpc</groupId>
             <artifactId>quarkus-pi4j</artifactId>
-            <version>0.2.4</version>
+            <version>0.2.5</version>
         </dependency>
     </dependencies>
 
