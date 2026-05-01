@@ -31,7 +31,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <quarkus.version>3.34.1</quarkus.version>
-        <pi4j.version>4.0.0</pi4j.version>
+        <pi4j.version>4.0.1</pi4j.version>
     </properties>
 
     <dependencyManagement>
