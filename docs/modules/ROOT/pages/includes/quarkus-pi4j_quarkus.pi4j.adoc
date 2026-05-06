@@ -7,7 +7,7 @@ h|[.header-title]##Configuration property##
 h|Type
 h|Default
 
-a|icon:lock[title=Fixed at build time] [[quarkus-pi4j_quarkus-pi4j-health-enabled]] [.property-path]##link:#quarkus-pi4j_quarkus-pi4j-health-enabled[`quarkus.pi4j.health.enabled`]##
+a|icon:lock[title=Fixed at build time] [[quarkus-pi4j_quarkus-pi4j-health-enabled]] [.property-path]##link:#quarkus-pi4j_quarkus-pi4j-health-enabled[`+++quarkus.pi4j.health.enabled+++`]##
 ifdef::add-copy-button-to-config-props[]
 config_property_copy_button:+++quarkus.pi4j.health.enabled+++[]
 endif::add-copy-button-to-config-props[]
