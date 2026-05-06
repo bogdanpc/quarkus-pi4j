@@ -4,7 +4,7 @@
 
     <groupId>com.github.bogdanpc</groupId>
     <artifactId>quarkus-pi4j-parent</artifactId>
-    <version>0.2.5</version>
+    <version>0.2.6</version>
     <packaging>pom</packaging>
     <name>Quarkus Pi4j - Parent</name>
     <url>https://github.com/bogdanpc/quarkus-pi4j</url>
