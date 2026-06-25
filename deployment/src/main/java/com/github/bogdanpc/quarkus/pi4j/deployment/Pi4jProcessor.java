@@ -1,5 +1,6 @@
 package com.github.bogdanpc.quarkus.pi4j.deployment;
 
+import com.github.bogdanpc.quarkus.pi4j.devui.Pi4jJsonRpcService;
 import com.github.bogdanpc.quarkus.pi4j.runtime.ContextConfiguration;
 import com.github.bogdanpc.quarkus.pi4j.runtime.Pi4jBuildTimeConfig;
 import com.github.bogdanpc.quarkus.pi4j.runtime.Pi4jHealthCheck;
@@ -21,7 +22,10 @@ class Pi4jProcessor {
 
     @BuildStep
     AdditionalBeanBuildItem additionalBeans() {
-        return new AdditionalBeanBuildItem(ContextConfiguration.class);
+        return AdditionalBeanBuildItem.builder()
+                .addBeanClasses(ContextConfiguration.class, Pi4jJsonRpcService.class)
+                .setUnremovable()
+                .build();
     }
 
     @BuildStep
